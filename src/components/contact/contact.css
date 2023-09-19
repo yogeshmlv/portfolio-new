@@ -102,3 +102,81 @@
 .contact__card-data {
     color: var(--title-color);
 }
+.contact__notification {
+    display: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+.contact__notification.show {
+    display: block;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* Add this to your CSS file */
+
+/* Red border for incorrect input */
+.error-border {
+    border: 1px solid red;
+  }
+  
+  /* Green border for correct input */
+  .contact__form-input:not(.error-border):focus {
+    border: 1px solid green;
+  }
+  
+  /* Display error message on hover */
+  .contact__form-div:hover .error-message {
+    display: block;
+  }
+  /* CSS for tooltip */
+.tooltip {
+    position: relative;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: #ff5555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Red border for incorrect input */
+  .error-border {
+    border: 1px solid red;
+  }
+  
+  /* Green border for correct input */
+  .contact__form-input:not(.error-border):focus {
+    border: 1px solid green;
+  }
+  
