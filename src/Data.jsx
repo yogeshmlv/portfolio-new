@@ -205,7 +205,7 @@ export const cv = [
     subtitle: 'B.Tech',
     date: '2015 - 2019',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'In 2019, I proudly graduated with honors, earning my B.Tech degree in the specialized field of Textile Engineering, a testament to my dedication and commitment to excellence.',
     category: 'education',
   },
 
@@ -215,7 +215,7 @@ export const cv = [
     subtitle: 'Intermediate',
     date: '2013 - 2015',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'In 2015, I achieved the second rank in my school while pursuing the Science stream (PCM), and I graduated with an impressive 88% score.',
     category: 'education',
   },
 
@@ -225,7 +225,7 @@ export const cv = [
     subtitle: 'High School',
     date: '2011 - 2013',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'In 2013, I completed my education in the Science stream with an impressive 80% score.',
     category: 'education',
   },
 
