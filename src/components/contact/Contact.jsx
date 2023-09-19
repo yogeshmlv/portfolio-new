@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import {FaRegAddressBook,FaRegEnvelope,FaRegUser,FaRegMap} from 'react-icons/fa';
 import ShapeOne from "../../assets/shape-1.png";
 import './contact.css';
@@ -18,6 +18,24 @@ const Contact = () => {
         email: '',
         phone: '',
       });
+      const [showNotification, setShowNotification] = useState(false);
+      const hideNotification = () => {
+        setShowNotification(false);
+    };
+
+    useEffect(() => {
+        if (showNotification) {
+            // Automatically hide the notification after 10 seconds
+            const timeoutId = setTimeout(() => {
+                hideNotification();
+            }, 30000);
+
+            // Clean up the timer when the component unmounts or when showNotification changes
+            return () => {
+                clearTimeout(timeoutId);
+            };
+        }
+    }, [showNotification]);
 
       const validateForm = () => {
         let valid = true;
@@ -83,21 +101,23 @@ const Contact = () => {
         const value = e.target.value;
         setForm({ ...form, [name]: value });
     };
-    
+
     const handleSubmit = (e) => {
-        e.preventDefault();
-        if (validateForm()) {
+      e.preventDefault();
+      if (validateForm()) {
           axios
-            .post(
-              'https://sheet.best/api/sheets/3e1631da-d2bd-4084-8395-fc92b6fd3d5d',
-              form
-            )
-            .then((response) => {
-              // Clearing form fields
-              setForm({ name: '', email: '', subject: '', message: '', phone: '' });
-            });
-        }
-      };
+              .post(
+                  'https://sheet.best/api/sheets/3e1631da-d2bd-4084-8395-fc92b6fd3d5d',
+                  form
+              )
+              .then((response) => {
+                  // Clearing form fields
+                  setForm({ name: '', email: '', subject: '', message: '', phone: '' });
+                  // Show the notification after successful submission
+                  setShowNotification(true);
+              });
+      }
+    };  
 
   return (
     <section className="contact section" id="contact">
@@ -153,91 +173,90 @@ const Contact = () => {
                     </div>
                 </div>
 
-
-                <form className='contact__form' action="" onSubmit={handleSubmit}>
-                    <div className="contact__form-group grid">
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag text-cs">Your Full Name <b>*</b></label>
-                            <input
-                            type="text"
-                            name="name"
-                            onChange={handleChange}
-                            value={form.name}
-                            className={`contact__form-input ${
-                                errors.name && 'error-border'
-                            }`}
-                            />
-                            {errors.name && (
-                                <span className="error-message" style={{ marginTop: '5px', display: 'block' }}>{errors.name}</span>
-                                )}
-                        </div>
-                    
-                    
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag text-cs">Your Email Address <b>*</b></label>
-                            <input
-                            type="email"
-                            name="email"
-                            onChange={handleChange}
-                            value={form.email}
-                            className={`contact__form-input ${
-                                errors.email && 'error-border'
-                            }`}
-                            />
-                            {errors.email && (
-                            <span className="error-message" style={{ marginTop: '5px', display: 'block' }}>{errors.email}</span>
-                            )}
-                        </div>
-
-                        </div>
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag text-cs">Your Subject</label>
-                            <input
-                            type="text"
-                            name="subject"
-                            onChange={handleChange}
-                            value={form.subject}
-                            className={`contact__form-input ${
-                            errors.subject && 'error-border'
-                            }`}
-                        />
-                        </div>
-                        <div className="contact__form-div">
-                            <label className="contact__form-tag text-cs">Your Phone Number <b>*</b></label>
-                            <input
+                <form className="contact__form" action="" onSubmit={handleSubmit}>
+                  <div className="contact__form-group grid">
+                    <div className="contact__form-div tooltip">
+                      <label className="contact__form-tag text-cs">
+                        Your Full Name <b>*</b>
+                      </label>
+                      <input
                         type="text"
-                            name="phone"
-                            onChange={handleChange}
-                            value={form.phone}
-                            className={`contact__form-input ${
-                            errors.phone && 'error-border'
-                            }`}
-                            />
-                            {errors.phone && (
-                                <span className="error-message" style={{ marginTop: '5px', display: 'block' }}>{errors.phone}</span>
-                            )}
-                        </div>
+                        name="name"
+                        onChange={handleChange}
+                        value={form.name}
+                        className={`contact__form-input ${errors.name ? 'error-border' : ''}`}
+                      />
+                      {errors.name && (
+                        <div className="tooltiptext">{errors.name}</div>
+                      )}
+                    </div>
 
+                    <div className="contact__form-div tooltip">
+                      <label className="contact__form-tag text-cs">
+                        Your Email Address <b>*</b>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        onChange={handleChange}
+                        value={form.email}
+                        className={`contact__form-input ${errors.email ? 'error-border' : ''}`}
+                      />
+                      {errors.email && (
+                        <div className="tooltiptext">{errors.email}</div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="contact__form-div tooltip">
+                    <label className="contact__form-tag text-cs">Your Subject</label>
+                    <input
+                      type="text"
+                      name="subject"
+                      onChange={handleChange}
+                      value={form.subject}
+                      className={`contact__form-input ${errors.subject ? 'error-border' : ''}`}
+                    />
+                    {errors.subject && (
+                      <div className="tooltiptext">{errors.subject}</div>
+                    )}
+                  </div>
+                  <div className="contact__form-div tooltip">
+                    <label className="contact__form-tag text-cs">
+                      Your Phone Number <b>*</b>
+                    </label>
+                    <input
+                      type="text"
+                      name="phone"
+                      onChange={handleChange}
+                      value={form.phone}
+                      className={`contact__form-input ${errors.phone ? 'error-border' : ''}`}
+                    />
+                    {errors.phone && (
+                      <div className="tooltiptext">{errors.phone}</div>
+                    )}
+                  </div>
 
-                        <div className="contact__form-div contact__form-area">
-                            <label className="contact__form-tag text-cs">Your Message <b>*</b></label>
-                            <textarea
-                            name="message"
-                            onChange={handleChange}
-                            value={form.message}
-                            className={`contact__form-input ${
-                            errors.message && 'error-border'
-                            }`}
-                            ></textarea>
-                        </div>
+                  <div className="contact__form-div contact__form-area tooltip">
+                    <label className="contact__form-tag text-cs">Your Message <b>*</b></label>
+                    <textarea
+                      name="message"
+                      onChange={handleChange}
+                      value={form.message}
+                      className={`contact__form-input ${errors.message ? 'error-border' : ''}`}
+                    ></textarea>
+                    {errors.message && (
+                      <div className="tooltiptext">{errors.message}</div>
+                    )}
+                  </div>
 
-                        <div className="contact__submit">
-                            <p>* Accept the terms and conditions</p>
-                            <button type='submit' className="btn text-cs">
-                                Send Message
-                            </button>
-                        </div>
+                  <div className="contact__submit">
+                    <p>* Accept the terms and conditions</p>
+                    <button type="submit" className="btn text-cs">
+                      Send Message
+                    </button>
+                  </div>
                 </form>
+
             </div>
 
             <div className="section__deco deco__left">
@@ -246,6 +265,11 @@ const Contact = () => {
 
             <div className="section__bg-wrapper">
              <span className="bg__title">Contact Me</span>
+            </div>
+
+            {/* Notification */}
+            <div className={`contact__notification ${showNotification && 'show'}`}>
+                We will contact you soon..................
             </div>
     </section>
   )
