@@ -28,7 +28,7 @@ const Contact = () => {
             // Automatically hide the notification after 10 seconds
             const timeoutId = setTimeout(() => {
                 hideNotification();
-            }, 30000);
+            }, 3000);
 
             // Clean up the timer when the component unmounts or when showNotification changes
             return () => {
