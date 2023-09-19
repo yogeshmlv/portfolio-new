@@ -176,7 +176,7 @@
     }
     .resume__icon {
         right: -14px !important;
-        line-height: 2.0rem;
+        line-height: 2.2rem;
     }
 
     .nav__data {
@@ -256,6 +256,9 @@
     .show-menu {
         width: 100%;
     }
+    .bg__title {
+        font-size: 90px;
+    }
 
     .nav__btns {
         column-gap: 24px;
@@ -283,6 +286,9 @@
 @media screen and (max-width: 350px) {
     .nav__data {
         padding: 80px 0 p 90px;
+    }
+    .bg__title {
+        font-size: 90px;
     }
 
     .header__deco {
