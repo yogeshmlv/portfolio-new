@@ -61,10 +61,9 @@ const Pricing = () => {
                 </h3>
 
                 <p className="pricing__description">
-                 Specializing in web development and UI/UX, I bring expertise in technologies like React,
+                  Specializing in web development and UI/UX, I bring expertise in technologies like React,
                  HTML/CSS, JavaScript, Laravel, and jQuery. With a commitment to delivering 
-                 top-notch solutions tailored to your project's needs, I prioritize user experience 
-                 and effective communication to ensure project success.
+                 top-notch solutions tailored to your project's needs, I prioritize user experience.
                 </p>
 
                 <ul className="pricing__list">
@@ -103,9 +102,9 @@ const Pricing = () => {
             </h3>
 
             <p className="pricing__description">
-            Committed to web development and UI/UX excellence, with skills in React,
-             HTML/CSS, JavaScript, Laravel, and jQuery. Dedicated to consistently delivering
-              outstanding results and ongoing improvement.
+           Committed to web development and UI/UX excellence, with skills in React,React-Router,Redux 
+              HTML/CSS, JavaScript, Laravel, and jQuery. Dedicated to consistently delivering outstanding results 
+              and driven by ongoing improvement.
             </p>
 
             <ul className="pricing__list">
