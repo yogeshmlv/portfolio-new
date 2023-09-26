@@ -169,15 +169,15 @@ export const projects = [
     description:
       'On this website, I leveraged React and built a custom Bootstrap design from scratch, enhancing it with Redux for a captivating user experience.',
   },
-  {
-    id: 4,
-    img: Project4,
-    category: 'Development',
-    linkUrl:'https://book.dccpets.in/',
-    title: 'BookingPortal',
-    description:
-      'We used jQuery, core JavaScript, PHP for backend, and added Pickadate for enhanced functionality on the website.',
-  },
+  // {
+  //   id: 4,
+  //   img: Project4,
+  //   category: 'Development',
+  //   linkUrl:'https://book.dccpets.in/',
+  //   title: 'BookingPortal',
+  //   description:
+  //     'We used jQuery, core JavaScript, PHP for backend, and added Pickadate for enhanced functionality on the website.',
+  // },
   {
     id: 5,
     img: Project5,
@@ -187,15 +187,15 @@ export const projects = [
     description:
       'I built this website from scratch using React and Bootstrap, integrated Firebase for data handling, and employed EMAILJS for email functionality.',
   },
-  {
-    id: 6,
-    img: Project6,
-    category: 'Branding',
-    linkUrl:'https://vet360-monarch.aaldaehr.com/',
-    title: 'AdminPanel',
-    description:
-      'This website was crafted with Laravel, incorporating jQuery, HTML, CSS, and Bootstrap for a seamless experience.',
-  },
+  // {
+  //   id: 6,
+  //   img: Project6,
+  //   category: 'Branding',
+  //   linkUrl:'https://vet360-monarch.aaldaehr.com/',
+  //   title: 'AdminPanel',
+  //   description:
+  //     'This website was crafted with Laravel, incorporating jQuery, HTML, CSS, and Bootstrap for a seamless experience.',
+  // },
 ];
 
 export const cv = [
@@ -272,7 +272,7 @@ export const testimonials = [
   {
     id: 2,
     img: Testimonial2,
-    name: 'Sanchit Shah',
+    name: 'Sunny Shah',
     author: 'CEO & Founder (Desko Home)',
     description:
       'Did great job, would love to rehire again with my next project! great in communicating, and always available for a consult and for project! i wish to have! Thank you!',
@@ -280,7 +280,7 @@ export const testimonials = [
   {
     id: 3,
     img: Testimonial3,
-    name: 'Durgesh Kumar',
+    name: 'Durga Kumar',
     author: 'CEO & Founder (AiDigitek)',
     description:
       'He communicate very well.Understood what needed to be done.Estimated very well and committed to his estimation.Deliver in time.Fast and have the solution.Profissional.',
