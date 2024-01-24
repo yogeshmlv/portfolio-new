@@ -1,9 +1,9 @@
 import Project1 from './assets/project1.jpg';
 import Project2 from './assets/project2.jpg';
 import Project3 from './assets/Poject3.png';
-import Project4 from './assets/Project4.png';
+// import Project4 from './assets/Project4.png';
 import Project5 from './assets/Project5.jpg';
-import Project6 from './assets/Project6.jpg';
+// import Project6 from './assets/Project6.jpg';
 
 import Testimonial1 from './assets/Testimonial.jpg';
 import Testimonial2 from './assets/Testimonial.jpg';

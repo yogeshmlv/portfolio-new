@@ -23,6 +23,7 @@ const Resume = () => {
                                 <Card key={id} title={val.title} subtitle={val.subtitle} date={val.date} description ={val.description} />
                             )
                         }
+                        return null;
                     })}
                 </div>
             </div>
@@ -42,6 +43,7 @@ const Resume = () => {
                                 />
                             )
                         }
+                        return null;
                     })}
                 </div>
             </div>

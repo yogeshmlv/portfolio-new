@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState ,useEffect} from 'react';
 import {FaRegAddressBook,FaRegEnvelope,FaRegUser,FaRegMap} from 'react-icons/fa';
 import ShapeOne from "../../assets/shape-1.png";
