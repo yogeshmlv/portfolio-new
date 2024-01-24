@@ -3,6 +3,7 @@ import React, { useState ,useEffect} from 'react';
 import {FaRegAddressBook,FaRegEnvelope,FaRegUser,FaRegMap} from 'react-icons/fa';
 import ShapeOne from "../../assets/shape-1.png";
 import './contact.css';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const [form, setForm] = useState({
@@ -104,20 +105,21 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
+      
       if (validateForm()) {
-          axios
-              .post(
-                  'https://sheet.best/api/sheets/3e1631da-d2bd-4084-8395-fc92b6fd3d5d',
-                  form
-              )
-              .then((response) => {
-                  // Clearing form fields
-                  setForm({ name: '', email: '', subject: '', message: '', phone: '' });
-                  // Show the notification after successful submission
-                  setShowNotification(true);
-              });
+        emailjs.sendForm('service_x2slgr4', 'template_0wg0e4i', e.target, 'f4TtFEdZG9E0Vl_ih')
+          .then((response) => {
+            // Clearing form fields
+            setForm({ name: '', email: '', subject: '', message: '', phone: '' });
+            // Show the notification after successful submission
+            setShowNotification(true);
+          })
+          .catch((error) => {
+            console.error('Error sending email:', error);
+            // Handle error here
+          });
       }
-    };  
+    }; 
 
   return (
     <section className="contact section" id="contact">

@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__container container grid">
                <div className="footer__socials">
-                    <a href="https://wa.me/8318561551" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+                    <a href="https://wa.me/918318561551" target="_blank" rel="noopener noreferrer" className="footer__social-link">
                         <FaWhatsapp />
                     </a>
                     <a href="https://www.linkedin.com/in/yogesh-singh-4b909b149"  target="_blank" rel="noopener noreferrer" className="footer__social-link">
