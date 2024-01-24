@@ -10,7 +10,7 @@ const Footer = () => {
                     <a href="https://wa.link/br0lsr" target="_blank" rel="noopener noreferrer" className="footer__social-link">
                         <FaWhatsapp />
                     </a>
-                    <a href="https://www.linkedin.com/in/yogesh-singh-4b909b149"  target="_blank" rel="noopener noreferrer" className="footer__social-link">
+                    <a href="https://www.linkedin.com/in/yogesh1dev"  target="_blank" rel="noopener noreferrer" className="footer__social-link">
                         <FaLinkedin />
                     </a>
                     <a href="https://github.com/yogeshmlv" target="_blank" rel="noopener noreferrer" className="footer__social-link">
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
 
                     <p className="footer__copyright text-cs">
-                     &copy; 2023 <span>Yogesh Singh</span>. All Rights Reserved
+                     &copy; 2024 <span>Yogesh Singh</span>. All Rights Reserved
                     </p>
 
                     <p className="footer__copyright text-cs"> Developed by  

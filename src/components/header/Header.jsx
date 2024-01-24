@@ -74,8 +74,8 @@ const Header = () => {
                                     <Link 
                                     className='nav__link text-cs'
                                     to={path}
-                                     spy={true} 
-                                     hashSpy={true}
+                                    //  spy={true} 
+                                    //  hashSpy={true}
                                      smooth={true} 
                                      offset={-150} 
                                      duration={500} 
@@ -92,7 +92,7 @@ const Header = () => {
                     <a href="https://wa.link/br0lsr" target="_blank" rel="noopener noreferrer" className="header__social-link">
                         <FaWhatsapp />
                     </a>
-                    <a href="https://www.linkedin.com/in/yogesh-singh-4b909b149"  target="_blank" rel="noopener noreferrer" className="header__social-link">
+                    <a href="https://www.linkedin.com/in/yogesh1dev"  target="_blank" rel="noopener noreferrer" className="header__social-link">
                         <FaLinkedin />
                     </a>
                     <a href="https://github.com/yogeshmlv" target="_blank" rel="noopener noreferrer" className="header__social-link">

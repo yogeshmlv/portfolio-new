@@ -61,7 +61,7 @@ const Home = () => {
                     <a href="https://wa.link/br0lsr" target="_blank" rel="noopener noreferrer" className="home__social-link">
                         <FaWhatsapp />
                     </a>
-                    <a href="https://www.linkedin.com/in/yogesh-singh-4b909b149"  target="_blank" rel="noopener noreferrer" className="home__social-link">
+                    <a href="https://www.linkedin.com/in/yogesh1dev"  target="_blank" rel="noopener noreferrer" className="home__social-link">
                         <FaLinkedin />
                     </a>
                     <a href="https://github.com/yogeshmlv" target="_blank" rel="noopener noreferrer" className="home__social-link">
