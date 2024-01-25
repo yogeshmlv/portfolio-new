@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { links } from '../../Data';
-import {FaWhatsapp,FaLinkedin,FaGithub,FaInstagram} from 'react-icons/fa';
+import {FaWhatsapp,FaLinkedin,FaGithub,FaInstagram,FaTwitter} from 'react-icons/fa';
 import ShapeOne from "../../assets/shape-1.png";
 import {BsSun, BsMoon} from 'react-icons/bs';
 import './header.css';
@@ -100,6 +100,9 @@ const Header = () => {
                     </a>
                     <a href="https://www.instagram.com/its__novo/" target="_blank" rel="noopener noreferrer" className="home__social-link">
                         <FaInstagram />
+                    </a>
+                    <a href="https://twitter.com/Yogesh__Dev" target="_blank" rel="noopener noreferrer" className="home__social-link">
+                        <FaTwitter />
                     </a>
                 </div>
                </div>
